@@ -1,8 +1,9 @@
 const numberView = document.querySelector(".number");
 const rangeValue = document.querySelector("#range");
-const priceValue = document.querySelector(".price");
+const priceValue = document.querySelectorAll(".price");
 const checkbox = document.querySelector("#checkbox");
 const discount = document.querySelector(".discount");
+const numberText = document.querySelector('.number-text');
 
 
 // function to display discount when yearly billing is clicked
@@ -21,24 +22,34 @@ function sameRange(e){
     numberView.value = priceInput;
     numberView.innerHTML = priceInput;
     if(numberView.value <= 10){
-        priceValue.innerHTML = '8.00';
-    }else if(priceInput < 100){
-        priceValue.innerHTML = '12.00';
-    }else if(priceInput < 500){
-        priceValue.innerHTML = '16.00';
-    }else if(priceInput < 1000){
-        priceValue.innerHTML = '24.00';
-    }else if(priceInput == 1000){
-        priceValue.innerHTML = '36.00';
-        numberView.innerHTML = '1'
-        document.querySelector('.number-text').innerHTML = 'm';
-    }
+            priceValue.forEach((item)=>{ item.innerHTML = '8.00';
+            numberText.innerHTML = 'k'; 
+        })
+        }else if(priceInput < 100){
+            priceValue.forEach((item)=>{ item.innerHTML = '12.00';
+            numberText.innerHTML = 'k'; })
+        }else if(priceInput < 500){
+            priceValue.forEach((item)=>{ item.innerHTML = '16.00';
+            numberText.innerHTML = 'k'; })
+        }else if(priceInput < 1000){
+            priceValue.forEach((item)=>{ item.innerHTML = '24.00';
+            numberText.innerHTML = 'k'; })
+        }else if(priceInput >= 1000){
+            priceValue.forEach((item)=>{ item.innerHTML = '36.00';
+            if(item.innerHTML == 36.00 || item.innerHTML == 27 ){
+                numberView.innerHTML = '1'
+                numberText.innerHTML = 'm'; 
+            }
+        })
+            
+        }
      
     if(discount.classList.contains('discount-display')){
-        let mainPrice = priceValue.innerHTML.toString();
-        console.log(mainPrice)
-        let me = parseFloat(mainPrice) * 0.75;
-        priceValue.innerHTML = me;
+        priceValue.forEach((items)=>{
+            let mainprice = items.innerHTML.toString();
+            let me = parseFloat(mainprice) * 0.75;
+            items.innerHTML = me;
+        })
     }
     
     
