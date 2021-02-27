@@ -1,0 +1,125 @@
+.hero{
+    position: relative;
+    margin-bottom: 2rem;
+
+    &_main{
+        position: absolute;
+        width: 600px;
+        left: 50%;
+        transform: translateX(-50%);
+        // height: 326px;
+        box-shadow: 5px 10px 20px $grayish-blue;
+        @include break-point-down(small){
+            width: 200px;
+        }
+    }
+    .review{
+        text-align: center;
+        margin-bottom: 1.5rem;
+        @include break-point-up(large){
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+           align-items: center;
+        }
+    }
+    .per-month{
+        text-align: center;
+    }
+    .billings{
+        display: flex;
+        flex-direction: row;
+        margin-left: -0.7rem;
+        align-items: center;
+        font-size: 10px;
+        margin-bottom: 2rem;
+        @include break-point-up(medium){
+            margin-left: 5rem;
+            font-size: 15px;
+        }
+        .monthly{
+            margin-left: 2px;
+            margin-right: 5px;
+        }
+        .toggle-button{
+            margin-left: 3px;
+            margin-right: 5px;
+        }
+        .yearly{
+            margin-left: 3px;
+            margin-right: 2px;
+        }
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        ul{
+            padding-bottom: 1rem;
+            li{
+                list-style: none;
+                img{
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        @include break-point-up(medium){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .discount{
+        background-color: $grayish-blue;
+        border-radius: 20px;
+        color: $light-red;
+        display: none;
+    }
+    .discount-display{
+        display: inline;
+    }
+    .number-text{
+        margin-left: -2px;
+        margin-right: 4px;
+    }
+    .price{
+        color: $dark-saturated-blue; 
+       font-size: 25px;
+       font-weight:$font-heavy;
+    }
+}
+
+
+// .label{
+//     width: 50px;
+//     height: 20px;
+//     display: flex;
+//     align-items: center;
+//     position: relative;
+//     justify-content: space-between;
+//     padding: 5px;
+//     background: #111111;
+//     border-radius: 20px;
+//     /* z-index: 1; */
+// }
+// #checkbox{
+//     opacity: 0;
+//     position: absolute;
+// }
+// #checkbox:checked + .label .ball{
+//     transform: translateX(24px);
+// }
+// .ball{
+//     width: 20px;
+//     height: 20px;
+//     background-color: white;
+//     border-radius: 50%;
+//     position: absolute;
+//     /* top: 2px; */
+//     left: 2px;
+//     /* z-index: 2; */
+//     transition: transform 0.2s linear;
+// }

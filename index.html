@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app/scss/style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+<body>
+  <header class="headers">
+    <h1>Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial. No credit card required. </p>
+  </header>
+  <section class="hero">
+    <div class="hero_main background">
+      <div class="review">
+        <p><span class="number" >100</span><span class="number-text">k</span> Pageviews</p>
+        <h2 class="hide-for-mobile">$16.00 <span class="number ">/month</span></h2>
+      </div>
+      <div class="ranger">
+        <input type="range" name="range" id="range" class="range1" min="0" max="1000" value="100">
+      </div>
+      <div class="per-month hide-for-pc">
+        <h2 > $<span class="price" id="pricing"> 16.00</span> <span class="number">/month</span></h2>
+      </div>
+      <div class="billings">
+        <div class="monthly">
+          <p>Monthly Billing</p>
+        </div>
+        <div class="toggle-button">
+          <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+            <div class="ball"></div>
+        </label>
+        </div>
+        <div class="yearly">
+          <p>Yearly Billing <span class="discount">-25%</span></p>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="list">
+        <ul>
+          <li> <img src="images/icon-check.svg" alt=""> Unlimited websites</li>
+          <li><img src="images/icon-check.svg" alt="">100% data ownership</li>
+          <li> <img src="images/icon-check.svg" alt="">Email reports</li>
+        </ul>
+        <div>
+          <a class="button" href="#">Start my trial</a>
+        </div>
+      </div>
+     
+    </div>
+
+  </section>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Victor Chukwu</a>.
+  </div>
+  <script src="app/js/app.js"></script>
+</body>
+</html>
